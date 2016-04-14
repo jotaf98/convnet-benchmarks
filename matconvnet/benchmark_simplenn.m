@@ -5,13 +5,14 @@ root = '../../matconvnet-bitbucket' ;
 % set to GPU number
 gpu = 0 ;
 
+opts = {'ConserveMemory', false, 'cudnn', true} ;
+% opts = {'ConserveMemory', false, 'cudnn', false} ;
+
 
 steps = 10 ;
 dryruns = 10 ;
 
 sz = [224, 224, 3, 128] ;
-
-opts = {'ConserveMemory', false} ;
 
 run([root '/matlab/vl_setupnn.m']) ;
 
